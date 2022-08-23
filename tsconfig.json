@@ -15,8 +15,7 @@
     "newLine": "LF",
     "declaration": true,
     "outDir": "./lib"
+    // "strictNullChecks": true
   },
-  "files": [
-    "./index.ts"
-  ]
+  "files": ["./index.ts"]
 }

@@ -1,0 +1,11 @@
+Todo arranca desde plugins.ts
+1) Desde entities defino los campos de la base de datos via typeorm
+
+2) Defino los campos que quiero agregar a la api graphql desde el folder api/api-extensions.ts
+
+3)Con vendure corriendo, ejecuto yarn dev:generate-types, esto actualiza todos los archivos que empiezan con generated... (podes ver codegen.json)
+
+4)Trabajo con la ui, en components tengo que modificar a mano los dos example-detail.graphql agregadon los campos que necesito ( detail y list)
+
+5)Modifico los archivos html y los example-detail.components.ts a gusto para incorporar los campos que necesito.
+

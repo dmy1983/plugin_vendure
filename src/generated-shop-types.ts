@@ -2760,6 +2760,7 @@ export type Example = Node & {
   createdAt: Scalars['DateTime'];
   updatedAt: Scalars['DateTime'];
   name: Scalars['String'];
+  precio_dolar: Scalars['Float'];
 };
 
 export type ExampleList = PaginatedList & {
@@ -2859,6 +2860,7 @@ export type ExampleFilterParameter = {
   createdAt?: Maybe<DateOperators>;
   updatedAt?: Maybe<DateOperators>;
   name?: Maybe<StringOperators>;
+  precio_dolar?: Maybe<NumberOperators>;
 };
 
 export type ExampleSortParameter = {
@@ -2866,6 +2868,7 @@ export type ExampleSortParameter = {
   createdAt?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
   name?: Maybe<SortOrder>;
+  precio_dolar?: Maybe<SortOrder>;
 };
 
 export type ProductVariantFilterParameter = {

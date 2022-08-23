@@ -4503,6 +4503,7 @@ export type Example = Node & {
   createdAt: Scalars['DateTime'];
   updatedAt: Scalars['DateTime'];
   name: Scalars['String'];
+  precio_dolar: Scalars['Float'];
 };
 
 export type ExampleList = PaginatedList & {
@@ -4513,11 +4514,13 @@ export type ExampleList = PaginatedList & {
 
 export type CreateExampleInput = {
   name: Scalars['String'];
+  precio_dolar: Scalars['Float'];
 };
 
 export type UpdateExampleInput = {
   id: Scalars['ID'];
   name: Scalars['String'];
+  precio_dolar: Scalars['Float'];
 };
 
 export type AdministratorListOptions = {
@@ -4958,6 +4961,7 @@ export type ExampleFilterParameter = {
   createdAt?: Maybe<DateOperators>;
   updatedAt?: Maybe<DateOperators>;
   name?: Maybe<StringOperators>;
+  precio_dolar?: Maybe<NumberOperators>;
 };
 
 export type ExampleSortParameter = {
@@ -4965,6 +4969,7 @@ export type ExampleSortParameter = {
   createdAt?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
   name?: Maybe<SortOrder>;
+  precio_dolar?: Maybe<SortOrder>;
 };
 
 export type HistoryEntryFilterParameter = {
@@ -5045,7 +5050,7 @@ export type CreateExampleMutation = (
   { __typename?: 'Mutation' }
   & { createExample: (
     { __typename?: 'Example' }
-    & Pick<Example, 'id' | 'name'>
+    & Pick<Example, 'id' | 'name' | 'precio_dolar'>
   ) }
 );
 
@@ -5058,7 +5063,7 @@ export type UpdateExampleMutation = (
   { __typename?: 'Mutation' }
   & { updateExample: (
     { __typename?: 'Example' }
-    & Pick<Example, 'id' | 'name'>
+    & Pick<Example, 'id' | 'name' | 'precio_dolar'>
   ) }
 );
 
@@ -5074,7 +5079,7 @@ export type GetExamplesQuery = (
     & Pick<ExampleList, 'totalItems'>
     & { items: Array<(
       { __typename?: 'Example' }
-      & Pick<Example, 'id' | 'name' | 'createdAt'>
+      & Pick<Example, 'id' | 'name' | 'createdAt' | 'precio_dolar'>
     )> }
   ) }
 );
@@ -5088,6 +5093,6 @@ export type GetExampleQuery = (
   { __typename?: 'Query' }
   & { example?: Maybe<(
     { __typename?: 'Example' }
-    & Pick<Example, 'id' | 'name' | 'createdAt'>
+    & Pick<Example, 'id' | 'name' | 'createdAt' | 'precio_dolar'>
   )> }
 );

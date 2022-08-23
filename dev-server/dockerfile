@@ -1,7 +1,11 @@
-FROM node:14
+
+# FROM node:14.18.2-bullseye-slim
+FROM nikolaik/python-nodejs:python3.10-nodejs16-bullseye as development
 
 WORKDIR /usr/src/app
 
 COPY package.json ./
 COPY yarn.lock ./
+
 RUN yarn
+

@@ -1,11 +1,12 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export const GET_EXAMPLE = gql`
-    query GetExample($id: ID!) {
-        example(id: $id) {
-            id
-            name
-            createdAt
-        }
+  query GetExample($id: ID!) {
+    example(id: $id) {
+      id
+      name
+      createdAt
+      precio_dolar
     }
+  }
 `;
