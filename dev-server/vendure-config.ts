@@ -9,6 +9,7 @@ import { AdminUiPlugin } from "@vendure/admin-ui-plugin";
 import path from "path";
 import { ExamplePlugin } from "../index";
 import { compileUiExtensions } from "@vendure/ui-devkit/compiler";
+import { DefaultOrderPlacedStrategy } from "./order/default-order-placed-strategy";
 
 export const headlessConfig: VendureConfig = {
   apiOptions: {
@@ -57,6 +58,9 @@ export const headlessConfig: VendureConfig = {
       { name: "CUIT", type: "string" },
       { name: "DNI", type: "string" },
     ],
+  },
+  orderOptions: {
+    orderPlacedStrategy: new DefaultOrderPlacedStrategy(),
   },
   plugins: [
     AssetServerPlugin.init({

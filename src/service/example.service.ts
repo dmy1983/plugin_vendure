@@ -74,6 +74,13 @@ export class ExampleService {
   //implement onModuleInit to run the cron job every minute
   async onModuleInit(@Ctx() ctx: RequestContext, Order: Order) {
     const orderPlacedStrategy = new DefaultOrderPlacedStrategy();
+    orderPlacedStrategy.shouldSetAsPlaced(
+      ctx,
+      "AddingItems",
+      "ArrangingPayment",
+      Order
+    );
+
     console.log(
       orderPlacedStrategy.shouldSetAsPlaced(
         ctx,
@@ -88,6 +95,13 @@ export class ExampleService {
     setInterval(() => {
       this.create(ctx, { name: "DMY", precio_dolar: 100 });
       console.log("Cron job running");
+
+      orderPlacedStrategy.shouldSetAsPlaced(
+        ctx,
+        "AddingItems",
+        "ArrangingPayment",
+        Order
+      );
     }, 100000);
   }
 }
