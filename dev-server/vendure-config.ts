@@ -9,7 +9,7 @@ import { AdminUiPlugin } from "@vendure/admin-ui-plugin";
 import path from "path";
 import { ExamplePlugin } from "../index";
 import { compileUiExtensions } from "@vendure/ui-devkit/compiler";
-import { DefaultOrderPlacedStrategy } from "./order/default-order-placed-strategy";
+import { DefaultOrderPlacedStrategy } from "@vendure/core/dist/config/order/default-order-placed-strategy";
 
 export const headlessConfig: VendureConfig = {
   apiOptions: {
